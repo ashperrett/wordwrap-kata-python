@@ -25,5 +25,4 @@ class TestWordwrap(unittest.TestCase):
         self.assertEqual("the\nthe\nthe\nthe\nthe\nthe",self.wordwrap.wrap("the the the the the the",3))
 
     def test_string_wrapped_multi_line_no_word_boundary_alignment(self):
-        print(self.wordwrap.wrap("a random sentence that will test multiple line word wrapping",20))
         self.assertEqual("a random sentence\nthat will test\nmultiple line word\nwrapping",self.wordwrap.wrap("a random sentence that will test multiple line word wrapping",20))
