@@ -9,6 +9,9 @@ class TestWordwrap(unittest.TestCase):
     def test_empty_string(self):
         self.assertEqual("",self.wordwrap.wrap("",5))
     
+    def test_zero_column(self):
+        self.assertEqual("",self.wordwrap.wrap("test string",0))
+
     def test_string_less_than_column_number(self):
         self.assertEqual("test string",self.wordwrap.wrap("test string",15))
 
