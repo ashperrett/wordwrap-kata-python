@@ -1,9 +1,9 @@
 class Wordwrap():
 
     def wrap(self,inStr,column):
-        inStr = inStr.strip()
-        if column == 0:
+        if inStr is None or column == 0:
             return ""
+        inStr = inStr.strip()
         if len(inStr) <= column:
             return inStr.strip()
         elif len(inStr) > column:

@@ -6,6 +6,9 @@ class TestWordwrap(unittest.TestCase):
     def setUp(self):
         self.wordwrap = wordwrap.Wordwrap()
 
+    def test_string_is_none_returns_empty_string(self):
+        self.assertEqual("",self.wordwrap.wrap(None,5))
+
     def test_empty_string(self):
         self.assertEqual("",self.wordwrap.wrap("",5))
     
