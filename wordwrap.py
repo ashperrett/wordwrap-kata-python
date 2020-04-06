@@ -5,7 +5,7 @@ class Wordwrap():
             return ""
         inStr = inStr.strip()
         if len(inStr) <= column:
-            return inStr.strip()
+            return inStr
         elif len(inStr) > column:
             moveTo = column
             if inStr[column] != " ":
